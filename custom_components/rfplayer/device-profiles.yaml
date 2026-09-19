@@ -41,6 +41,12 @@
         category: diagnostic
         state:
           value_path: "$.frame.infos.subType"
+    sensor:
+      - name: "Rf Level"
+        device_class: signal_strength
+        unit: "dB"
+        state:
+          value_path: "$.frame.header.rfLevel"
 - name: X10|CHACON|KD101|BLYSS|FS20 On/Off
   match:
     protocol: "CHACON|KD101|BLYSS|FS20"
