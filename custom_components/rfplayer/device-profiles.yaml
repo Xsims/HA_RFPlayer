@@ -214,9 +214,9 @@
           "1": closed
           "4": open
           "7": open
-        cmd_open: ON RTS ID {unit_code} QUALIFIER 0
-        cmd_close: OFF RTS ID {unit_code} QUALIFIER 0
-        cmd_stop: DIM RTS ID {unit_code} %4
+        cmd_open: ON RTS ID {address} QUALIFIER 0
+        cmd_close: OFF RTS ID {address} QUALIFIER 0
+        cmd_stop: DIM RTS ID {address} %4
     sensor:
       - name: "Rf Level"
         device_class: signal_strength
@@ -239,9 +239,9 @@
           "1": closed
           "4": open
           "7": open
-        cmd_open: ON RTS ID {unit_code} QUALIFIER 0
-        cmd_close: OFF RTS ID {unit_code} QUALIFIER 0
-        cmd_stop: DIM RTS ID {unit_code} %4
+        cmd_open: ON RTS ID {address} QUALIFIER 0
+        cmd_close: OFF RTS ID {address} QUALIFIER 0
+        cmd_stop: DIM RTS ID {address} %4
     sensor:
       - name: "Rf Level"
         device_class: signal_strength
