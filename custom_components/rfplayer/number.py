@@ -13,7 +13,7 @@ from homeassistant.helpers.restore_state import RestoreEntity
 
 _LOGGER = logging.getLogger(__name__)
 
-JAMMING_DEVICE_ID = "JAMMING_0"
+JAMMING_DEVICE_ID = "JAMMING-0"
 JAMMING_DEVICE_IDENTIFIERS = {(DOMAIN, JAMMING_DEVICE_ID)}
 
 
