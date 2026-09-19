@@ -39,7 +39,7 @@ DEFAULT_INIT_COMMANDS = ",".join(
         "SELECTIVITY H 0",
         "SENSITIVITY L 4",
         "SENSITIVITY H 4",
-        "DSPTRIGGER L 8",
+        "DSPTRIGGER L 4",
         "DSPTRIGGER H 6",
         "RFLINKTRIGGER L 10",
         "RFLINKTRIGGER H 18",
