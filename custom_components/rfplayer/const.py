@@ -27,6 +27,27 @@ CONNECTION_TIMEOUT = 10
 INIT_COMMANDS_EMPTY = ""
 INIT_COMMANDS_SEPARATOR = ","
 
+# RF tuning + jamming detection defaults sent to the gateway at each connection.
+# Without these the receiver often misses short/weak RF frames (e.g. RTS/Somfy).
+DEFAULT_INIT_COMMANDS = ",".join(
+    [
+        "JAMMING 7",
+        "LEDACTIVITY 1",
+        "FREQ L 433920",
+        "FREQ H 868350",
+        "SELECTIVITY L 0",
+        "SELECTIVITY H 0",
+        "SENSITIVITY L 4",
+        "SENSITIVITY H 4",
+        "DSPTRIGGER L 8",
+        "DSPTRIGGER H 6",
+        "RFLINKTRIGGER L 10",
+        "RFLINKTRIGGER H 18",
+        "RFLINK 1",
+        "LBT 16",
+    ]
+)
+
 SERVICE_SEND_RAW_COMMAND = "send_raw_command"
 SERVICE_SEND_PAIRING_COMMAND = "send_pairing_command"
 SERVICE_SIMULATE_EVENT = "simulate_event"
