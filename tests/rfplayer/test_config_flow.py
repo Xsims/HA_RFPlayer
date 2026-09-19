@@ -8,7 +8,7 @@ import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from custom_components.rfplayer import config_flow
-from custom_components.rfplayer.const import DOMAIN, INIT_COMMANDS_EMPTY
+from custom_components.rfplayer.const import DEFAULT_INIT_COMMANDS, DOMAIN, INIT_COMMANDS_EMPTY
 from custom_components.rfplayer.helpers import get_identifiers_from_device_id
 from custom_components.rfplayer.rfplayerlib import RfPlayerClient
 from custom_components.rfplayer.rfplayerlib.device import RfDeviceEvent, RfDeviceId
@@ -105,7 +105,7 @@ async def test_setup_serial(serial_connection_mock: Mock, hass: HomeAssistant) -
         "automatic_add": True,
         "reconnect_interval": 10,
         "receiver_protocols": ALL_RECEIVER_PROTOCOLS,
-        "init_commands": "",
+        "init_commands": DEFAULT_INIT_COMMANDS,
         "verbose_mode": False,
         "devices": {},
         "redirect_address": {},
@@ -131,7 +131,7 @@ async def test_setup_serial_simulator(serial_connection_mock: Mock, hass: HomeAs
         "automatic_add": True,
         "reconnect_interval": 10,
         "receiver_protocols": ALL_RECEIVER_PROTOCOLS,
-        "init_commands": "",
+        "init_commands": DEFAULT_INIT_COMMANDS,
         "verbose_mode": False,
         "devices": {},
         "redirect_address": {},
@@ -159,7 +159,7 @@ async def test_setup_tcp(serial_connection_mock: Mock, hass: HomeAssistant) -> N
         "automatic_add": True,
         "reconnect_interval": 10,
         "receiver_protocols": ALL_RECEIVER_PROTOCOLS,
-        "init_commands": "",
+        "init_commands": DEFAULT_INIT_COMMANDS,
         "verbose_mode": False,
         "devices": {},
         "redirect_address": {},

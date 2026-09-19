@@ -5,7 +5,7 @@ SOME_INIT_COMMANDS = "PING,HELLO"
 # ===============
 
 JAMMING_BINARY_SENSOR_ENTITY_ID = "binary_sensor.jamming_0_detector"
-JAMMING_ID_STRING = "JAMMING_0"
+JAMMING_ID_STRING = "JAMMING-0"
 JAMMING_BINARY_SENSOR_FRIENDLY_NAME = "JAMMING 0 Detector"
 
 # Oregon examples

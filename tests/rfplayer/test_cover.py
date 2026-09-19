@@ -58,7 +58,7 @@ async def test_cover(serial_connection_mock: Mock, hass: HomeAssistant, test_pro
     state = hass.states.get(RTS_ENTITY_ID)
     assert state
     assert state.state == STATE_CLOSED
-    tr.write.assert_called_once_with(f"ZIA++OFF RTS ID {RTS_UNIT_CODE} QUALIFIER 0\n\r".encode())
+    tr.write.assert_called_once_with(f"ZIA++OFF RTS ID {RTS_X10_ADDRESS} QUALIFIER 0\n\r".encode())
     tr.write.reset_mock()
 
     await hass.services.async_call(
@@ -71,7 +71,7 @@ async def test_cover(serial_connection_mock: Mock, hass: HomeAssistant, test_pro
     state = hass.states.get(RTS_ENTITY_ID)
     assert state
     assert state.state == STATE_OPEN
-    tr.write.assert_called_once_with(f"ZIA++ON RTS ID {RTS_UNIT_CODE} QUALIFIER 0\n\r".encode())
+    tr.write.assert_called_once_with(f"ZIA++ON RTS ID {RTS_X10_ADDRESS} QUALIFIER 0\n\r".encode())
     tr.write.reset_mock()
 
     await hass.services.async_call(
@@ -84,7 +84,7 @@ async def test_cover(serial_connection_mock: Mock, hass: HomeAssistant, test_pro
     state = hass.states.get(RTS_ENTITY_ID)
     assert state
     assert state.state == STATE_OPEN
-    tr.write.assert_called_once_with(f"ZIA++DIM RTS ID {RTS_UNIT_CODE} %4\n\r".encode())
+    tr.write.assert_called_once_with(f"ZIA++DIM RTS ID {RTS_X10_ADDRESS} %4\n\r".encode())
 
 
 @pytest.mark.asyncio
